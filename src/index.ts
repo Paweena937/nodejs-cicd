@@ -1,20 +1,36 @@
 //max min avergq
 
 //min
-function minNumber (numbers:number) { 
-    return Math.min(numbers);
+export function minNumber (numbers:number[]) { 
+    return Math.min(...numbers);
 }
-console.log(minNumber)
+
 
 //max
 
-function maxNumber(numbers:number) {
-    return Math.max(numbers);    
+export function maxNumber(numbers:number[]) {
+    return Math.max(...numbers);    
 }
-console.log(maxNumber)
 
-//Average
 
-function AverageNumber(number:number) {
-    return sum AverageNumber)
+//sum
+
+export function sumNumber(numbers:number[]) { 
+    return numbers.reduce((a, b) => a + b, 0);
 }
+
+//Average 
+
+function averageNum(numbers:number[]) {
+    return sumNumber(numbers) / numbers.length;
+}
+
+//test 
+
+let numbers = [3,5,17,9]
+
+console.log(minNumber(numbers))
+console.log(maxNumber(numbers))
+console.log(sumNumber(numbers))
+console.log(averageNum(numbers))
+
